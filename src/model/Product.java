@@ -10,6 +10,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
+/**
+ *
+ */
 public class Product {
 
     // CLASS FIELDS
@@ -24,10 +27,23 @@ public class Product {
 
     // CONSTRUCTERS
 
+    /**
+     *
+     */
     public Product() {
 
     }
 
+    /**
+     *
+     * @param associatedParts
+     * @param id
+     * @param name
+     * @param price
+     * @param stock
+     * @param min
+     * @param max
+     */
     public Product(ObservableList<Part> associatedParts, int id, String name, double price, int stock, int min, int max) {
         this.associatedParts = associatedParts;
         this.id = id;
@@ -159,7 +175,8 @@ public class Product {
      * @param part
      */
     public void addAssociatedPart(Part part) {
-
+        // add a part to this products associatedParts
+        associatedParts.add(part);
     }
 
     /**
@@ -168,14 +185,25 @@ public class Product {
      * @return
      */
     public boolean deleteAssociatedPart(Part selectAssociatedPart) {
-
+        // for each part in the list of associated parts
+        for (int index = 0; index < associatedParts.size(); index++) {
+            // if this is the part we are looking for
+            if(selectAssociatedPart.getId() == associatedParts.get(index).getId()) {
+                // remove this part from the list of associated parts
+                associatedParts.remove(selectAssociatedPart);
+                // return true
+                return true;
+            }
+        }
+        // return false if no part is removed
+        return false;
     }
 
     /**
-     * 
+     *
      * @return
      */
     public ObservableList<Part> getAllAssociatedParts() {
-
+        return associatedParts;
     }
 }
