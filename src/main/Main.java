@@ -1,5 +1,6 @@
 package main;
 
+import model.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -20,5 +21,9 @@ public class Main extends Application {
     /** This is the main method. This is the first method called by the shell to start a java program */
     public static void main(String[] args) {
         launch(args);
+    }
+
+    public static void addTestData(Inventory inv) {
+
     }
 }

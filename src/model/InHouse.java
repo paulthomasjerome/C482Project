@@ -4,6 +4,10 @@ public class InHouse extends Part {
 
     private int machineID;
 
+    public InHouse() {
+
+    }
+
     public InHouse(int partID, String name, double price, int stock, int min, int max, int machineID) {
         setId(partID);
         setName(name);
