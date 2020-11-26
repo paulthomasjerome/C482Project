@@ -1,4 +1,4 @@
 package controllers;
 
-public class addPartController {
+public class AddPartController {
 }

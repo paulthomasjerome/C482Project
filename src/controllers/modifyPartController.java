@@ -1,4 +1,4 @@
 package controllers;
 
-public class modifyPartController {
+public class ModifyPartController {
 }
