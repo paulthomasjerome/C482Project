@@ -12,7 +12,13 @@ public class OutSourced extends Part {
     }
 
     public OutSourced(int partID, String name, double price, int stock, int min, int max, String companyName) {
-
+        setId(partID);
+        setName(name);
+        setPrice(price);
+        setStock(stock);
+        setMin(min);
+        setMax(max);
+        this.companyName = companyName;
     }
 
     // GETTERS AND SETTERS
