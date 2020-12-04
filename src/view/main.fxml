@@ -4,14 +4,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="678.0" prefWidth="1200.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label alignment="CENTER" prefHeight="99.0" prefWidth="573.0" text="Inventory Management System">
          <font>
             <Font size="40.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="619.0" layoutY="185.0" prefHeight="385.0" prefWidth="531.0" style="-fx-border-color: black;-fx-border-radius: 20%" />
-      <AnchorPane layoutX="34.0" layoutY="185.0" prefHeight="385.0" prefWidth="531.0" style="-fx-border-color: black;-fx-border-radius: 20%" />
+      <AnchorPane layoutX="629.0" layoutY="185.0" prefHeight="385.0" prefWidth="550.0" style="-fx-border-color: black;-fx-border-radius: 10%" />
+      <AnchorPane layoutX="20.0" layoutY="185.0" prefHeight="385.0" prefWidth="550.0" style="-fx-border-color: black;-fx-border-radius: 10%" />
    </children>
 </AnchorPane>
