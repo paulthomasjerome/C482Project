@@ -27,9 +27,9 @@
                   <TableColumn fx:id="productPriceField" prefWidth="134.0" text="Price/Cost per Unit" />
               </columns>
             </TableView>
-             <Button fx:id="addPartButton" layoutX="270.0" layoutY="275.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="67.0" text="Add" />
-             <Button fx:id="modifyPartButton" layoutX="350.0" layoutY="275.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="67.0" text="Modify" />
-            <Button layoutX="450.0" layoutY="275.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="67.0" text="Delete" />
+             <Button fx:id="addProductButton" layoutX="270.0" layoutY="275.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="67.0" text="Add" />
+             <Button fx:id="modifyProductButton" layoutX="350.0" layoutY="275.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="67.0" text="Modify" />
+            <Button fx:id="deleteProductButton" layoutX="450.0" layoutY="275.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="67.0" text="Delete" />
          </children></AnchorPane>
       <AnchorPane fx:id="partsContainer" layoutX="20.0" layoutY="100.0" prefHeight="335.0" prefWidth="550.0" style="-fx-border-color: black;-fx-border-radius: 5%">
          <children>
