@@ -2,49 +2,12 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="375.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
-        <children>
-            <TableView fx:id="parts" layoutX="14.0" layoutY="130.0" prefHeight="175.0" prefWidth="400.0">
-                <columns>
-                    <TableColumn fx:id="partsIDColumn" prefWidth="100.0" text="ID" />
-                    <TableColumn fx:id="partsNameColumn" prefWidth="100.0" text="Name" />
-                    <TableColumn fx:id="partsInvColumn" prefWidth="100.0" text="Inv" />
-                    <TableColumn fx:id="partsPriceColumn" prefWidth="100.0" text="Price" />
-                </columns>
-            </TableView>
-            <TableView fx:id="products" layoutX="435.0" layoutY="130.0" prefHeight="175.0" prefWidth="400.0">
-                <columns>
-                    <TableColumn fx:id="productsIDColumn" prefWidth="100.0" text="ID" />
-                    <TableColumn fx:id="productsNameColumn" prefWidth="100.0" text="Name" />
-                    <TableColumn fx:id="productsInvColumn" prefWidth="100.0" text="Inv" />
-                    <TableColumn fx:id="productsPriceColumn" prefWidth="100.0" text="Price" />
-                </columns>
-            </TableView>
-            <Label fx:id="lblParts" layoutX="14.0" layoutY="78.0" prefHeight="20.0" prefWidth="52.0" text="Parts">
-                <font>
-                    <Font name="Times New Roman Bold" size="18.0" />
-                </font>
-            </Label>
-            <Label fx:id="lblProducts" layoutX="435.0" layoutY="78.0" text="Products">
-                <font>
-                    <Font name="Times New Roman Bold" size="18.0" />
-                </font>
-            </Label>
-            <Label fx:id="lblMainScreen" layoutX="159.0" layoutY="11.0" scaleX="2.0" scaleY="2.0" text="Inventory Management System">
-                <font>
-                    <Font name="Georgia Bold" size="18.0" />
-                </font>
-            </Label>
-            <TextField fx:id="txtSearchParts" layoutX="152.0" layoutY="79.0" prefHeight="25.0" prefWidth="260.0" />
-            <TextField fx:id="txtSearchProducts" layoutX="572.0" layoutY="79.0" prefHeight="25.0" prefWidth="260.0" />
-            <Button fx:id="btnAddParts" layoutX="14.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Add" />
-            <Button fx:id="btnModifyParts" layoutX="81.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Modify" />
-            <Button fx:id="btnDeleteParts" layoutX="149.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Delete" />
-            <Button fx:id="btnAddProducts" layoutX="435.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Add" />
-            <Button fx:id="btnModifyProducts" layoutX="504.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Modify" />
-            <Button fx:id="btnDeleteProducts" layoutX="572.0" layoutY="310.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Delete" />
-            <Button fx:id="btnExit" layoutX="770.0" layoutY="346.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="73.0" text="Exit" />
-        </children>
-    </AnchorPane>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label text="Label" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>
