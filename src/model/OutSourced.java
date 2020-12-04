@@ -1,17 +1,17 @@
 package model;
 
-public class Outsourced extends Part {
+public class OutSourced extends Part {
 
     // CLASS FIELDS
 
     private String companyName;
 
     // CONSTRUCTERS
-    public Outsourced() {
+    public OutSourced() {
 
     }
 
-    public Outsourced(int partID, String name, double price, int stock, int min, int max, String companyName) {
+    public OutSourced(int partID, String name, double price, int stock, int min, int max, String companyName) {
 
     }
 

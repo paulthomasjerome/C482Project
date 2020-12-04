@@ -13,17 +13,13 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("/view/main.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        Scene scene = new Scene(root);
+        primaryStage.setScene(scene);
         primaryStage.show();
     }
 
     /** This is the main method. This is the first method called by the shell to start a java program */
     public static void main(String[] args) {
         launch(args);
-    }
-
-    public static void addTestData(Inventory inv) {
-
     }
 }
