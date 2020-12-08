@@ -11,12 +11,12 @@
                 <Font name="System Bold" size="26.0" />
             </font>
         </Label>
-        <RadioButton layoutX="193.0" layoutY="30.0" mnemonicParsing="false" text="RadioButton">
+        <RadioButton layoutX="193.0" layoutY="30.0" mnemonicParsing="false" text="In-House">
             <font>
                 <Font size="18.0" />
             </font>
         </RadioButton>
-        <RadioButton layoutX="390.0" layoutY="30.0" mnemonicParsing="false" text="RadioButton">
+        <RadioButton layoutX="390.0" layoutY="30.0" mnemonicParsing="false" text="Outsourced">
             <font>
                 <Font size="18.0" />
             </font>
