@@ -4,64 +4,53 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="795.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ModifyProductController">
+<AnchorPane id="AnchorPane" fx:id="modifyProductScreen" prefHeight="795.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ModifyProductController">
     <children>
-        <AnchorPane layoutX="50.0" layoutY="32.0" prefHeight="733.0" prefWidth="1100.0" style="-fx-border-color: black; -fx-border-radius: 5%;">
+        <AnchorPane fx:id="modifyProductContentWrapper" layoutX="50.0" layoutY="32.0" prefHeight="733.0" prefWidth="1100.0" style="-fx-border-color: black; -fx-border-radius: 5%;">
             <children>
                 <Label layoutX="55.0" layoutY="34.0" prefHeight="47.0" prefWidth="245.0" text="Modify Product">
                     <font>
                         <Font name="System Bold" size="32.0" />
                     </font>
                 </Label>
-                <AnchorPane layoutX="55.0" layoutY="112.0" prefHeight="399.0" prefWidth="346.0">
-                    <children>
-                        <GridPane layoutY="62.0" prefHeight="200.0" prefWidth="214.0">
-                            <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="86.0" />
-                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.0" minWidth="10.0" prefWidth="128.0" />
-                            </columnConstraints>
-                            <rowConstraints>
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            </rowConstraints>
-                            <children>
-                                <Label text="ID" />
-                                <Label text="Name" GridPane.rowIndex="1" />
-                                <Label text="Inv" GridPane.rowIndex="2" />
-                                <Label text="Price" GridPane.rowIndex="3" />
-                                <TextField fx:id="addProductIdTextField" disable="true" editable="false" GridPane.columnIndex="1" />
-                                <TextField fx:id="addNameIdTextField" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                    <font>
-                                        <Font name="System Italic" size="12.0" />
-                                    </font></TextField>
-                                <TextField fx:id="addInventoryTextField" prefHeight="25.0" prefWidth="59.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                <TextField fx:id="addPriceTextField" prefWidth="141.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                                    <font>
-                                        <Font name="System Italic" size="12.0" />
-                                    </font></TextField>
-                            </children>
-                        </GridPane>
-                        <GridPane layoutY="262.0" prefHeight="50.0" prefWidth="350.0">
-                            <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="89.0" minWidth="10.0" prefWidth="89.0" />
-                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.0" minWidth="10.0" prefWidth="92.0" />
-                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="88.0" minWidth="10.0" prefWidth="75.0" />
-                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                            </columnConstraints>
-                            <rowConstraints>
-                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                            </rowConstraints>
-                            <children>
-                                <Label text="Max" />
-                                <Label text="Min" GridPane.columnIndex="2">
-                                </Label>
-                                <TextField fx:id="AddMaxTextField" prefWidth="92.0" GridPane.columnIndex="1" />
-                                <TextField fx:id="AddMinTextField" GridPane.columnIndex="3" />
-                            </children>
-                        </GridPane>
-                    </children>
+                <AnchorPane layoutX="55.0" layoutY="112.0" prefHeight="399.0" prefWidth="429.0">
+               <children>
+                  <Label fx:id="chosenIdLable" layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="40.0" text="Id">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <Label fx:id="chosenIdLable1" layoutX="14.0" layoutY="50.0" prefHeight="27.0" prefWidth="54.0" text="Name">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="chosenIdLable11" layoutX="14.0" layoutY="86.0" prefHeight="27.0" prefWidth="40.0" text="Inv">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="chosenIdLable111" layoutX="14.0" layoutY="122.0" prefHeight="27.0" prefWidth="40.0" text="Price">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="chosenIdLable1111" layoutX="14.0" layoutY="158.0" prefHeight="27.0" prefWidth="40.0" text="Max">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="78.0" layoutY="14.0" />
+                  <TextField layoutX="78.0" layoutY="50.0" />
+                  <TextField layoutX="78.0" layoutY="86.0" prefHeight="25.0" prefWidth="80.0" />
+                  <TextField layoutX="78.0" layoutY="122.0" prefHeight="25.0" prefWidth="80.0" />
+                  <TextField layoutX="78.0" layoutY="158.0" prefHeight="25.0" prefWidth="80.0" />
+                  <Label fx:id="chosenIdLable11111" layoutX="187.0" layoutY="158.0" prefHeight="27.0" prefWidth="40.0" text="Min">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField layoutX="237.0" layoutY="158.0" prefHeight="25.0" prefWidth="80.0" />
+               </children>
                 </AnchorPane>
                 <AnchorPane layoutX="482.0" layoutY="51.0" prefHeight="600.0" prefWidth="560.0">
                     <children>
