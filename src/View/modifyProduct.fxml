@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" fx:id="modifyProductScreen" prefHeight="795.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ModifyProductController">
+<AnchorPane id="AnchorPane" fx:id="modifyProductScreen" prefHeight="795.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <AnchorPane fx:id="modifyProductContentWrapper" layoutX="50.0" layoutY="32.0" prefHeight="733.0" prefWidth="1100.0" style="-fx-border-color: black; -fx-border-radius: 5%;">
             <children>
@@ -83,7 +83,7 @@
                         </Button>
                     </children>
                 </AnchorPane>
-                <Button fx:id="cancelActionButton" layoutX="930.0" layoutY="651.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" text="Cancel">
+                <Button fx:id="cancelModifyProduct" layoutX="930.0" layoutY="651.0" mnemonicParsing="false" onMouseClicked="#returnToMain" prefHeight="30.0" prefWidth="80.0" text="Cancel">
                     <font>
                         <Font size="14.0" />
                     </font>

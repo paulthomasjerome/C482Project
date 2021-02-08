@@ -11,11 +11,16 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/View/main.fxml"));
+    public void start(Stage stage) throws Exception{
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/main.fxml"));
+        Controllers.MainController controller = new Controllers.MainController();
+        loader.setController(controller);
+        Parent root = loader.load();
         Scene scene = new Scene(root);
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        stage.setScene(scene);
+        stage.setResizable(false);
+        stage.show();
     }
 
 //    Inventory inventory = new Inventory();

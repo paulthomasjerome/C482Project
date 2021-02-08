@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="779.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ModifyProductController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="779.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="30.0" layoutY="28.0" text="Add Part">
          <font>
@@ -68,7 +68,7 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <Button layoutX="456.0" layoutY="400.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="88.0" text="Cancel">
+      <Button layoutX="456.0" layoutY="400.0" mnemonicParsing="false" onMouseClicked="#returnToMain" prefHeight="39.0" prefWidth="88.0" text="Cancel">
          <font>
             <Font size="18.0" />
          </font>
