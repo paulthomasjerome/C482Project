@@ -2,6 +2,7 @@ package Model;
 
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
+import javafx.collections.FXCollections;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 
@@ -50,6 +51,7 @@ public class Product {
         this.stock = stock;
         this.min = min;
         this.max = max;
+        this.associatedParts = FXCollections.observableArrayList();
     }
 
     /**

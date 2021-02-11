@@ -1,13 +1,20 @@
 package Model;
 
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class Inventory {
 
     // CLASS FIELDS
 
-    private static ObservableList<Part> allParts;
-    private static ObservableList<Product> allProducts;
+    private ObservableList<Part> allParts;
+    private ObservableList<Product> allProducts;
+
+    // CONSTRUCTOR
+    public Inventory() {
+        this.allParts = FXCollections.observableArrayList();
+        this.allProducts = FXCollections.observableArrayList();
+    }
 
     // CLASS METHODS
 
@@ -15,7 +22,7 @@ public class Inventory {
      *
      * @param newPart
      */
-    public static void addPart(Part newPart) {
+    public void addPart(Part newPart) {
         // Add this part to list of all parts
         allParts.add(newPart);
     }
@@ -26,7 +33,7 @@ public class Inventory {
      * @param partId
      * @return
      */
-    public static Part lookupPart(int partId) {
+    public Part lookupPart(int partId) {
         // for each part in the list of all parts
         for (int index = 0; index < allParts.size(); index++) {
             // If this is the part id we are looking for
@@ -45,7 +52,7 @@ public class Inventory {
      * @param partName
      * @return
      */
-    public static Part lookupPart(String partName) {
+    public Part lookupPart(String partName) {
         // for each part in the list of all parts
         for (int index = 0; index < allParts.size(); index++) {
             // If this is the part name we are looking for
@@ -63,7 +70,7 @@ public class Inventory {
      * @param index
      * @param selectedPart
      */
-    public static void updatePart(int index, Part selectedPart) {
+    public void updatePart(int index, Part selectedPart) {
         // set the part at this index of the list of all parts to be the selected part
         allParts.set(index, selectedPart);
     }
@@ -73,7 +80,7 @@ public class Inventory {
      * @param selectedPart
      * @return
      */
-    public static boolean deletePart(Part selectedPart) {
+    public boolean deletePart(Part selectedPart) {
         // for each part in the list of all parts
         for (int index = 0; index < allParts.size(); index++) {
             // If this is the part we are looking for
@@ -92,7 +99,7 @@ public class Inventory {
      *
      * @return
      */
-    public static ObservableList<Part> getAllParts() {
+    public ObservableList<Part> getAllParts() {
         // return the list of all parts
         return  allParts;
     }
@@ -101,7 +108,7 @@ public class Inventory {
      *
      * @param newProduct
      */
-    public static void addProduct(Product newProduct) {
+    public void addProduct(Product newProduct) {
         // add the new product to the list of all products
         allProducts.add(newProduct);
     }
@@ -111,7 +118,7 @@ public class Inventory {
      * @param productId
      * @return
      */
-    public static Product lookupProduct(int productId) {
+    public Product lookupProduct(int productId) {
         // for each product in the list of all products
         for (int index = 0; index < allProducts.size(); index++) {
             // If this is the product id we are looking for
@@ -130,7 +137,7 @@ public class Inventory {
      * @param productName
      * @return
      */
-    public static Product lookupProduct(String productName) {
+    public Product lookupProduct(String productName) {
         // for each part in the list of all parts
         for (int index = 0; index < allProducts.size(); index++) {
             // If this is the part name we are looking for
@@ -148,7 +155,7 @@ public class Inventory {
      * @param index
      * @param newProduct
      */
-    public static void updateProduct(int index, Product newProduct) {
+    public void updateProduct(int index, Product newProduct) {
         // set the product at this index on the list of all products to be the new product
         allProducts.set(index, newProduct);
     }
@@ -158,7 +165,7 @@ public class Inventory {
      * @param selectedProduct
      * @return
      */
-    public static boolean deleteProduct(Product selectedProduct) {
+    public boolean deleteProduct(Product selectedProduct) {
         // for each part in the list of all parts
         for (int index = 0; index < allProducts.size(); index++) {
             // If this is the part we are looking for
@@ -177,7 +184,7 @@ public class Inventory {
      *
      * @return
      */
-    public static ObservableList<Product> getAllProducts() {
+    public ObservableList<Product> getAllProducts() {
         // return the list of all products
         return allProducts;
     }

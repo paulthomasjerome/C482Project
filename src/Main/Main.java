@@ -13,7 +13,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception{
         Inventory inventory = new Inventory();
-//        addTestData(inventory);
+        addTestData(inventory);
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/main.fxml"));
         Controllers.MainController controller = new Controllers.MainController();
