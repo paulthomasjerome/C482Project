@@ -12,6 +12,8 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception{
+        Inventory inventory = new Inventory();
+//        addTestData(inventory);
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/main.fxml"));
         Controllers.MainController controller = new Controllers.MainController();
@@ -22,18 +24,6 @@ public class Main extends Application {
         stage.setResizable(false);
         stage.show();
     }
-
-//    Inventory inventory = new Inventory();
-//    addTestData(inv);
-//
-//    FXMLLoader loader = new FXMLLoader(getClass().getResource("/Views/MainScreen.fxml"));
-//    Controllers.MainScreenController controller = new Controllers.MainScreenController(inv);
-//        loader.setController(controller);
-//    Parent root = loader.load();
-//    Scene scene = new Scene(root);
-//        stage.setScene(scene);
-//        stage.setResizable(false);
-//        stage.show();
 
     void addTestData(Inventory inventory) {
         //Add InHouse Parts
