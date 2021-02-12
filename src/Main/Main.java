@@ -16,7 +16,7 @@ public class Main extends Application {
         addTestData(inventory);
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/main.fxml"));
-        Controllers.MainController controller = new Controllers.MainController();
+        Controllers.MainController controller = new Controllers.MainController(inventory);
         loader.setController(controller);
         Parent root = loader.load();
         Scene scene = new Scene(root);

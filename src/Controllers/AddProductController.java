@@ -1,5 +1,6 @@
 package Controllers;
 
+import Model.Inventory;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -10,6 +11,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class AddProductController {
+    Inventory inventory;
+
 
     public AddProductController() {
 
@@ -19,7 +22,7 @@ public class AddProductController {
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/main.fxml"));
-            MainController controller = new MainController();
+            MainController controller = new MainController(inventory);
 
             loader.setController(controller);
             Parent root = loader.load();
