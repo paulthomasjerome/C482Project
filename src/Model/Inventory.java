@@ -1,5 +1,6 @@
 package Model;
 
+import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -46,23 +47,23 @@ public class Inventory {
         return null;
     }
 
-    // TODO FIND OUT WHAT THE FUCKING DEAL IS WITH THIS SHIT
     /**
      *
      * @param partName
      * @return
      */
-    public Part lookupPart(String partName) {
+    public ObservableList<Part> lookupPart(String partName) {
+        ObservableList partsList = FXCollections.observableArrayList();
         // for each part in the list of all parts
         for (int index = 0; index < allParts.size(); index++) {
-            // If this is the part name we are looking for
-            if (allParts.get(index).getName().equals(partName)) {
-                //return this part as a list
-                return allParts.get(index);
+            // If the current part name has no uniquely different characters
+            if (allParts.get(index).getName().contains(partName)) {
+                // add this to the partsList
+                partsList.add(allParts.get(index));
             }
         }
-        // if we cant find part return null
-        return null;
+        // return the list of parts with same/similar names
+        return partsList;
     }
 
     /**
@@ -137,17 +138,18 @@ public class Inventory {
      * @param productName
      * @return
      */
-    public Product lookupProduct(String productName) {
-        // for each part in the list of all parts
+    public ObservableList<Product> lookupProduct(String productName) {
+        ObservableList productsList = FXCollections.observableArrayList();
+        // for each product in the list of all products
         for (int index = 0; index < allProducts.size(); index++) {
-            // If this is the part name we are looking for
-            if (allProducts.get(index).getName().equals(productName)) {
-                //return this part as a list
-                return allProducts.get(index);
+            // If the current product name has no uniquely different characters
+            if (allProducts.get(index).getName().contains(productName)) {
+                // add this to the productsList
+                productsList.add(allProducts.get(index));
             }
         }
-        // if we cant find part return null
-        return null;
+        // return the list of products with same/similar names
+        return productsList;
     }
 
     /**
@@ -166,17 +168,17 @@ public class Inventory {
      * @return
      */
     public boolean deleteProduct(Product selectedProduct) {
-        // for each part in the list of all parts
+        // for each product in the list of all parts
         for (int index = 0; index < allProducts.size(); index++) {
-            // If this is the part we are looking for
+            // If this is the product we are looking for
             if (allProducts.get(index).getId() == selectedProduct.getId()) {
-                // remove this part
+                // remove this product
                 allProducts.remove((index));
                 // return true
                 return true;
             }
         }
-        // if we cant find part return null
+        // if we cant find product return null
         return false;
     }
 
