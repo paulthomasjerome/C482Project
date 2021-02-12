@@ -83,7 +83,7 @@
                </font></Label>
             <TextField fx:id="searchPartsText" layoutX="268.0" layoutY="11.0"  prefHeight="37.0" prefWidth="244.0" />
          </children></AnchorPane>
-      <Button fx:id="exitButton" layoutX="1076.0" layoutY="450.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="96.0" text="Exit">
+      <Button fx:id="exitButton" layoutX="1076.0" layoutY="450.0" mnemonicParsing="false" onMouseClicked="#terminate" prefHeight="39.0" prefWidth="96.0" text="Exit">
          <font>
             <Font size="20.0" />
          </font>

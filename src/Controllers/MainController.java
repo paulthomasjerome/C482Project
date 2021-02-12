@@ -3,6 +3,7 @@ package Controllers;
 import Model.Inventory;
 import Model.Part;
 import Model.Product;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -58,6 +59,9 @@ public class MainController implements Initializable {
         this.inventory = inventory;
     }
 
+    public void terminate(MouseEvent event) {
+        Platform.exit();
+    }
 
     public void addPartScene(MouseEvent event) {
         try {
