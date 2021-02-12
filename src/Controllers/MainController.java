@@ -1,21 +1,92 @@
 package Controllers;
 
 import Model.Inventory;
+import Model.Part;
+import Model.Product;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TableCell;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class MainController {
+public class MainController implements Initializable {
+    @FXML
+    private TableView<Part> partsTable;
+    @FXML
+    private TableView<Product> productsTable;
+    private ObservableList<Part> partInventory = FXCollections.observableArrayList();
+    private ObservableList<Product> productInventory = FXCollections.observableArrayList();
 
     Inventory inventory;
 
-    public MainController(Inventory inventory) {
+    /**
+     * Initializes the controller class.
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        System.out.println("test");
+        generatePartsTable();
+        generateProductsTable();
+    }
 
+    private <T> TableColumn<T, Double> formatPrice() {
+        TableColumn<T, Double> costCol = new TableColumn("Price");
+        costCol.setCellValueFactory(new PropertyValueFactory<>("Price"));
+        // Format as currency
+        costCol.setCellFactory((TableColumn<T, Double> column) -> {
+            return new TableCell<T, Double>() {
+                @Override
+                protected void updateItem(Double item, boolean empty) {
+                    if (!empty) {
+                        setText("$" + String.format("%10.2f", item));
+                    }
+                    else{
+                        setText("");
+                    }
+                }
+            };
+        });
+        return costCol;
+    }
+
+    private void generatePartsTable() {
+        partInventory.setAll(inventory.getAllParts());
+        TableColumn<Part, Double> costCol = formatPrice();
+        partsTable.getColumns().addAll(costCol);
+        partsTable.setItems(partInventory);
+        partsTable.refresh();
+    }
+
+    private void generateProductsTable() {
+        productInventory.setAll(inventory.getAllProducts());
+
+        TableColumn<Product, Double> costCol = formatPrice();
+        productsTable.getColumns().addAll(costCol);
+        productsTable.setItems(productInventory);
+        productsTable.refresh();
+    }
+
+    // CONSTRUCTORS
+
+    public MainController() {
+
+    }
+
+    public MainController(Inventory inventory) {
+        this.inventory = inventory;
     }
 
 
