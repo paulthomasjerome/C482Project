@@ -44,8 +44,8 @@
                   </TableColumn>
               </columns>
             </TableView>
-             <Button fx:id="addProductButton" layoutX="270.0" layoutY="275.0" mnemonicParsing="false" onMouseClicked="#addProduct" prefHeight="37.0" prefWidth="67.0" text="Add" />
-             <Button fx:id="modifyProductButton" layoutX="350.0" layoutY="275.0" mnemonicParsing="false" onMouseClicked="#modifyProduct" prefHeight="37.0" prefWidth="67.0" text="Modify" />
+             <Button fx:id="addProductButton" layoutX="270.0" layoutY="275.0" mnemonicParsing="false" onMouseClicked="#addProductScene" prefHeight="37.0" prefWidth="67.0" text="Add" />
+             <Button fx:id="modifyProductButton" layoutX="350.0" layoutY="275.0" mnemonicParsing="false" onMouseClicked="#modifyProductScene" prefHeight="37.0" prefWidth="67.0" text="Modify" />
             <Button fx:id="deleteProductButton" layoutX="450.0" layoutY="275.0" mnemonicParsing="false"  prefHeight="37.0" prefWidth="67.0" text="Delete" />
          </children></AnchorPane>
       <AnchorPane fx:id="partsContainer" layoutX="20.0" layoutY="100.0" prefHeight="335.0" prefWidth="550.0" style="-fx-border-color: black;-fx-border-radius: 5%">
@@ -74,8 +74,8 @@
                   </TableColumn>
               </columns>
             </TableView>
-             <Button fx:id="addPartButton" layoutX="270.0" layoutY="275.0" mnemonicParsing="false" onMouseClicked="#addPart" prefHeight="37.0" prefWidth="67.0" text="Add" />
-             <Button fx:id="modifyPartButton" layoutX="350.0" layoutY="275.0" mnemonicParsing="false" onMouseClicked="#modifyPart"  prefHeight="37.0" prefWidth="67.0" text="Modify" />
+             <Button fx:id="addPartButton" layoutX="270.0" layoutY="275.0" mnemonicParsing="false" onMouseClicked="#addPartScene" prefHeight="37.0" prefWidth="67.0" text="Add" />
+             <Button fx:id="modifyPartButton" layoutX="350.0" layoutY="275.0" mnemonicParsing="false" onMouseClicked="#modifyPartScene"  prefHeight="37.0" prefWidth="67.0" text="Modify" />
              <Button fx:id="deletePartButton" layoutX="445.0" layoutY="275.0" mnemonicParsing="false"  prefHeight="37.0" prefWidth="67.0" text="Delete" />
             <Label fx:id="partsHeader" layoutX="14.0" layoutY="6.0" prefHeight="47.0" prefWidth="85.0" text="Parts">
                <font>

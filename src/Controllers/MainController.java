@@ -27,53 +27,28 @@ public class MainController implements Initializable {
     private TableView<Part> partsTable;
     @FXML
     private TableView<Product> productsTable;
-    private ObservableList<Part> partInventory = FXCollections.observableArrayList();
-    private ObservableList<Product> productInventory = FXCollections.observableArrayList();
+    private ObservableList<Part> partsList = FXCollections.observableArrayList();
+    private ObservableList<Product> productsList = FXCollections.observableArrayList();
 
     Inventory inventory;
 
-    /**
-     * Initializes the controller class.
-     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        generatePartsTable();
-        generateProductsTable();
+        renderPartsData();
+        renderProductsData();
     }
 
-    private <T> TableColumn<T, Double> formatPrice() {
-        TableColumn<T, Double> costCol = new TableColumn("Price");
-        costCol.setCellValueFactory(new PropertyValueFactory<>("Price"));
-        // Format as currency
-        costCol.setCellFactory((TableColumn<T, Double> column) -> {
-            return new TableCell<T, Double>() {
-                @Override
-                protected void updateItem(Double item, boolean empty) {
-                    if (!empty) {
-                        setText("$" + String.format("%10.2f", item));
-                    }
-                    else{
-                        setText("");
-                    }
-                }
-            };
-        });
-        return costCol;
-    }
-
-    private void generatePartsTable() {
-        partInventory.setAll(inventory.getAllParts());
-        partsTable.setItems(partInventory);
+    private void renderPartsData() {
+        partsList.setAll(inventory.getAllParts());
+        partsTable.setItems(partsList);
         partsTable.refresh();
     }
 
-    private void generateProductsTable() {
-        productInventory.setAll(inventory.getAllProducts());
-        productsTable.setItems(productInventory);
+    private void renderProductsData() {
+        productsList.setAll(inventory.getAllProducts());
+        productsTable.setItems(productsList);
         productsTable.refresh();
     }
-
-    // CONSTRUCTORS
 
     public MainController() {
 
@@ -84,12 +59,10 @@ public class MainController implements Initializable {
     }
 
 
-    public void addPart(MouseEvent event) {
-
+    public void addPartScene(MouseEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/addPart.fxml"));
             AddPartController controller = new AddPartController(inventory);
-
             loader.setController(controller);
             Parent root = loader.load();
             Scene scene = new Scene(root);
@@ -97,18 +70,15 @@ public class MainController implements Initializable {
             stage.setScene(scene);
             stage.setResizable(false);
             stage.show();
-
         } catch (IOException e) {
             System.out.println(e);
         }
     }
 
-    public void addProduct(MouseEvent event) {
-
+    public void addProductScene(MouseEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/addProduct.fxml"));
             AddProductController controller = new AddProductController(inventory);
-
             loader.setController(controller);
             Parent root = loader.load();
             Scene scene = new Scene(root);
@@ -116,18 +86,15 @@ public class MainController implements Initializable {
             stage.setScene(scene);
             stage.setResizable(false);
             stage.show();
-
         } catch (IOException e) {
             System.out.println(e);
         }
     }
 
-    public void modifyPart(MouseEvent event) {
-
+    public void modifyPartScene(MouseEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/modifyPart.fxml"));
             ModifyPartController controller = new ModifyPartController(inventory);
-
             loader.setController(controller);
             Parent root = loader.load();
             Scene scene = new Scene(root);
@@ -135,18 +102,15 @@ public class MainController implements Initializable {
             stage.setScene(scene);
             stage.setResizable(false);
             stage.show();
-
         } catch (IOException e) {
             System.out.println(e);
         }
     }
 
-    public void modifyProduct(MouseEvent event) {
-
+    public void modifyProductScene(MouseEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/modifyProduct.fxml"));
             ModifyProductController controller = new ModifyProductController(inventory);
-
             loader.setController(controller);
             Parent root = loader.load();
             Scene scene = new Scene(root);
@@ -154,9 +118,10 @@ public class MainController implements Initializable {
             stage.setScene(scene);
             stage.setResizable(false);
             stage.show();
-
         } catch (IOException e) {
             System.out.println(e);
         }
     }
+
+
 }
