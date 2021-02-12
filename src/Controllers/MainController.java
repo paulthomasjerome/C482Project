@@ -37,7 +37,6 @@ public class MainController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        System.out.println("test");
         generatePartsTable();
         generateProductsTable();
     }
@@ -64,17 +63,12 @@ public class MainController implements Initializable {
 
     private void generatePartsTable() {
         partInventory.setAll(inventory.getAllParts());
-        TableColumn<Part, Double> costCol = formatPrice();
-        partsTable.getColumns().addAll(costCol);
         partsTable.setItems(partInventory);
         partsTable.refresh();
     }
 
     private void generateProductsTable() {
         productInventory.setAll(inventory.getAllProducts());
-
-        TableColumn<Product, Double> costCol = formatPrice();
-        productsTable.getColumns().addAll(costCol);
         productsTable.setItems(productInventory);
         productsTable.refresh();
     }
@@ -94,7 +88,7 @@ public class MainController implements Initializable {
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/addPart.fxml"));
-            AddPartController controller = new AddPartController();
+            AddPartController controller = new AddPartController(inventory);
 
             loader.setController(controller);
             Parent root = loader.load();
@@ -113,7 +107,7 @@ public class MainController implements Initializable {
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/addProduct.fxml"));
-            AddProductController controller = new AddProductController();
+            AddProductController controller = new AddProductController(inventory);
 
             loader.setController(controller);
             Parent root = loader.load();
@@ -132,7 +126,7 @@ public class MainController implements Initializable {
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/modifyPart.fxml"));
-            ModifyPartController controller = new ModifyPartController();
+            ModifyPartController controller = new ModifyPartController(inventory);
 
             loader.setController(controller);
             Parent root = loader.load();
@@ -151,7 +145,7 @@ public class MainController implements Initializable {
 
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/modifyProduct.fxml"));
-            ModifyProductController controller = new ModifyProductController();
+            ModifyProductController controller = new ModifyProductController(inventory);
 
             loader.setController(controller);
             Parent root = loader.load();

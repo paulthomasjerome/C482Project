@@ -13,8 +13,8 @@ import java.io.IOException;
 public class AddPartController {
     Inventory inventory;
 
-    public AddPartController() {
-
+    public AddPartController(Inventory inventory) {
+        this.inventory = inventory;
     }
 
     public void returnToMain(MouseEvent event) {

@@ -14,8 +14,8 @@ public class AddProductController {
     Inventory inventory;
 
 
-    public AddProductController() {
-
+    public AddProductController(Inventory inventory) {
+        this.inventory = inventory;
     }
 
     public void returnToMain(MouseEvent event) {
